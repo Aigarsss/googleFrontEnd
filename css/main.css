@@ -90,6 +90,10 @@ body {
   font-size: 0.8rem;
 }
 
+.container .main .searchResult {
+  margin-bottom: 35px;
+}
+
 .container .main .searchResult__searchLink, .container .main .searchResult__translateLink {
   display: inline-block;
 }
@@ -138,7 +142,30 @@ body {
   margin-bottom: 10px;
 }
 
+.container .main .paginationContainer {
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
 footer {
   background-color: #f1f3f4;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 180px;
+}
+
+footer .addressBar {
+  height: 100%;
+}
+
+footer .helpBar {
+  height: 100%;
 }
 /*# sourceMappingURL=main.css.map */

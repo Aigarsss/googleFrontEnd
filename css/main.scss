@@ -96,6 +96,7 @@ body {
     }
 
     .searchResult {
+      margin-bottom: 35px;
       &__searchLink,
       &__translateLink {
         display: inline-block;
@@ -141,9 +142,27 @@ body {
         }
       }
     }
+
+    .paginationContainer {
+      width: 400px;
+      margin: 0 auto;
+      margin-bottom: 25px;
+    }
   }
 }
 
 footer {
   background-color: $light-gray;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 180px;
+
+  .addressBar {
+    height: 100%;
+  }
+
+  .helpBar {
+    height: 100%;
+  }
 }

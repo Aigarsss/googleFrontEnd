@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+//colors
+$black: #202125;
+$blue: #2c00b9;
+$gray: #4d5157;
+$light-gray: #f1f3f4;
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  //   font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+.logo,
+.profile {
+  position: absolute;
+}
+
+.logo {
+  left: 15px;
+  top: 15px;
+}
+
+.profile {
+  right: 15px;
+  top: 15px;
+}
+
+.container {
+  width: 48%;
+  margin-left: 180px;
+
+  header {
+    // border: 1px solid black; //for testing
+    font-size: 0.8rem;
+
+    .topMain {
+      &__searchBar__input {
+        width: 104%;
+        position: relative;
+        z-index: 10;
+        left: -2%;
+        margin-top: 15px;
+        padding: 7px;
+        padding-left: 25px;
+        border-radius: 50px;
+        border: 2px solid $light-gray;
+        box-shadow: 0 2px 5px 1px $light-gray;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .topSecondary {
+      display: flex;
+      color: $gray;
+
+      &__optionsMenu,
+      &__settings {
+        width: 100%;
+        ul {
+          display: flex;
+          list-style: none;
+
+          li {
+            padding: 8px;
+          }
+        }
+      }
+
+      &__settings {
+        ul {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+
+  .main {
+    .resultAmount {
+      color: $gray;
+      margin-bottom: 15px;
+      font-size: 0.8rem;
+    }
+
+    .searchResult {
+      &__searchLink,
+      &__translateLink {
+        display: inline-block;
+      }
+
+      &__translateLink {
+        color: $blue;
+      }
+
+      &__header {
+        margin: 7px 0;
+        color: $blue;
+      }
+
+      &__bodyText {
+        line-height: 1.5rem;
+        color: $gray;
+        margin-bottom: 15px;
+      }
+    }
+
+    .connectedSearches {
+      &__header {
+        color: $black;
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+
+      &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 35px;
+        &__connectedSearcLink {
+          text-decoration: none;
+          color: $black;
+          background-color: $light-gray;
+          min-width: 320px;
+          padding: 15px 35px;
+          border-radius: 25px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $light-gray;
+}

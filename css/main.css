@@ -146,11 +146,12 @@ body {
   width: 400px;
   margin: 0 auto;
   margin-bottom: 25px;
+  text-align: center;
 }
 
 footer {
   background-color: #f1f3f4;
-  height: 100px;
+  height: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,13 +160,38 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 180px;
+  color: #4d5157;
+  font-size: 15px;
 }
 
 footer .addressBar {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .addressBar__text a {
+  text-decoration: none;
+  color: #4d5157;
 }
 
 footer .helpBar {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .helpBar a {
+  text-decoration: none;
+  color: #4d5157;
+  margin-right: 15px;
 }
 /*# sourceMappingURL=main.css.map */

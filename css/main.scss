@@ -147,22 +147,41 @@ body {
       width: 400px;
       margin: 0 auto;
       margin-bottom: 25px;
+      text-align: center;
     }
   }
 }
 
 footer {
   background-color: $light-gray;
-  height: 100px;
+  height: 90px;
   display: flex;
   flex-direction: column;
   padding-left: 180px;
+  color: $gray;
+  font-size: 15px;
 
   .addressBar {
     height: 100%;
+    display: flex;
+    align-items: center;
+
+    &__text {
+      a {
+        text-decoration: none;
+        color: $gray;
+      }
+    }
   }
 
   .helpBar {
     height: 100%;
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: $gray;
+      margin-right: 15px;
+    }
   }
 }

@@ -7,11 +7,11 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
 }
 
 body {
   position: relative;
+  font-family: "Open Sans", sans-serif;
 }
 
 .logo,
@@ -19,9 +19,41 @@ body {
   position: absolute;
 }
 
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profile a {
+  text-decoration: none;
+  color: #4d5157;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.seperator {
+  width: 100%;
+  border-bottom: 1px solid #dadce0;
+}
+
 .logo {
-  left: 15px;
-  top: 15px;
+  left: 25px;
+  top: 35px;
+  background-image: url("../img/googlelogo_color_92x30dp.png");
+  background-size: 95px;
+  background-repeat: no-repeat;
+  width: 184px;
+  height: 30px;
 }
 
 .profile {
@@ -43,8 +75,9 @@ body {
   position: relative;
   z-index: 10;
   left: -2%;
-  margin-top: 15px;
-  padding: 7px;
+  margin-top: 25px;
+  margin-bottom: 13px;
+  padding: 15px;
   padding-left: 25px;
   border-radius: 50px;
   border: 2px solid #f1f3f4;
@@ -54,6 +87,11 @@ body {
 
 .container header .topMain__searchBar__input:focus {
   outline: none;
+}
+
+.container header .topMain__searchBar__input:hover {
+  -webkit-box-shadow: 0 2px 10px 3px #f1f3f4;
+          box-shadow: 0 2px 10px 3px #f1f3f4;
 }
 
 .container header .topSecondary {
@@ -74,8 +112,19 @@ body {
   list-style: none;
 }
 
+.container header .topSecondary__optionsMenu ul .selectedItem, .container header .topSecondary__settings ul .selectedItem {
+  color: #3c00ff;
+  border-bottom: 3px solid #3c00ff;
+}
+
 .container header .topSecondary__optionsMenu ul li, .container header .topSecondary__settings ul li {
-  padding: 8px;
+  color: #4d5157;
+  padding: 15px 10px;
+  min-width: 75px;
+}
+
+.container header .topSecondary__optionsMenu ul li i, .container header .topSecondary__settings ul li i {
+  margin-right: 5px;
 }
 
 .container header .topSecondary__settings ul {
@@ -84,9 +133,15 @@ body {
           justify-content: flex-end;
 }
 
+.container header .topSecondary__settings ul li {
+  text-align: right;
+  min-width: auto;
+}
+
 .container .main .resultAmount {
   color: #4d5157;
   margin-bottom: 15px;
+  margin-top: 15px;
   font-size: 0.8rem;
 }
 
@@ -99,12 +154,27 @@ body {
 }
 
 .container .main .searchResult__translateLink {
+  position: relative;
   color: #2c00b9;
+  margin-left: 15px;
+}
+
+.container .main .searchResult__translateLink::before {
+  content: "";
+  position: absolute;
+  left: -13px;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #4d5157;
 }
 
 .container .main .searchResult__header {
   margin: 7px 0;
   color: #2c00b9;
+  font-size: 20px;
 }
 
 .container .main .searchResult__bodyText {
@@ -142,11 +212,31 @@ body {
   margin-bottom: 10px;
 }
 
+.container .main .connectedSearches__container__connectedSearcLink i {
+  color: #4d5157;
+  margin-right: 25px;
+}
+
 .container .main .paginationContainer {
   width: 400px;
   margin: 0 auto;
   margin-bottom: 25px;
   text-align: center;
+  color: #2c00b9;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main .paginationContainer table td {
+  min-width: 20px;
 }
 
 footer {
@@ -159,7 +249,6 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-left: 180px;
   color: #4d5157;
   font-size: 15px;
 }
@@ -172,11 +261,20 @@ footer .addressBar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 1px solid #dadce0;
+}
+
+footer .addressBar__text {
+  padding-left: 180px;
 }
 
 footer .addressBar__text a {
   text-decoration: none;
   color: #4d5157;
+}
+
+footer .addressBar__text i {
+  font-size: 10px;
 }
 
 footer .helpBar {
@@ -187,6 +285,7 @@ footer .helpBar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 180px;
 }
 
 footer .helpBar a {

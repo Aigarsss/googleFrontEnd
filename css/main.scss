@@ -179,6 +179,7 @@ body {
     }
 
     .connectedSearches {
+      max-width: 660px;
       &__header {
         color: $black;
         font-weight: 400;

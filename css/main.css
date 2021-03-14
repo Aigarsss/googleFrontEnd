@@ -183,6 +183,10 @@ body {
   margin-bottom: 15px;
 }
 
+.container .main .connectedSearches {
+  max-width: 660px;
+}
+
 .container .main .connectedSearches__header {
   color: #202125;
   font-weight: 400;
